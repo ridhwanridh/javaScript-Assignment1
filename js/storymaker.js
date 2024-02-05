@@ -63,20 +63,18 @@ function setting_on_click() {
     settingCount = (settingCount + 1) % settings.length;
 }
 
-// concatenate the user story and display
 function playback_on_click() {
     const story = `${choosenNoun1.innerText} ${choosenVerb.innerText} ${choosenAdjective.innerText} ${choosenNoun2.innerText} ${choosenSetting.innerText}`;
     storyOutput.innerText = story;
 }
 
-// grabbing random element from arrays, concatenate and display
 function random_on_click() {
     choosenNoun1.innerText = getRandomWord(nouns1);
     choosenVerb.innerText = getRandomWord(verbs);
     choosenAdjective.innerText = getRandomWord(adjectives);
     choosenNoun2.innerText = getRandomWord(nouns2);
     choosenSetting.innerText = getRandomWord(settings);
-    playback_on_click(); // automatically display the story
+    playback_on_click(); 
 }
 
 function getRandomWord(array) {
